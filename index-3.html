@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BADDYBEATS — Visuals & Edits</title>
+<meta name="description" content="BADDYBEATS — premium Avee Player visualizers, music edits, intros and short-form creations.">
+<style>
+:root{
+  --bg:#050507; --panel:#0d0d12; --text:#f7f7fa; --muted:#a4a4b2;
+  --line:rgba(255,255,255,.10); --accent:#b86cff; --accent2:#5de1ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:
+  radial-gradient(circle at 80% 10%,rgba(184,108,255,.15),transparent 30%),
+  radial-gradient(circle at 10% 35%,rgba(93,225,255,.08),transparent 28%),var(--bg);
+  color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(5,5,7,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.navin{height:68px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:1.5px}
+.logo{
+ width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
+ background:linear-gradient(135deg,#fff,#b86cff 48%,#5de1ff);
+ color:#050507;font-weight:1000;box-shadow:0 0 30px rgba(184,108,255,.35)
+}
+.links{display:flex;gap:24px;color:#bbb;font-size:14px}
+.links a:hover{color:#fff}
+.hero{padding:92px 0 72px;min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.badge{display:inline-flex;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);font-size:12px;color:#cfcfd8}
+h1{font-size:clamp(52px,9vw,105px);line-height:.88;margin:22px 0;letter-spacing:-5px}
+.gradient{background:linear-gradient(100deg,#fff,#c88cff,#63e7ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:590px;color:var(--muted);font-size:18px;line-height:1.7}
+.buttons{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{padding:13px 19px;border-radius:13px;border:1px solid var(--line);font-weight:750}
+.btn.primary{background:#fff;color:#08080a}
+.btn.secondary{background:rgba(255,255,255,.05)}
+.visualizer{
+ height:390px;border:1px solid var(--line);border-radius:28px;background:
+ radial-gradient(circle at 50% 50%,rgba(184,108,255,.20),transparent 38%),#09090d;
+ display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+ box-shadow:0 25px 80px rgba(0,0,0,.5)
+}
+.ring{position:absolute;width:245px;height:245px;border:1px solid rgba(255,255,255,.18);border-radius:50%;animation:pulse 2s infinite}
+.ring.r2{width:190px;height:190px;animation-delay:.4s}.ring.r3{width:140px;height:140px;animation-delay:.8s}
+.bars{height:150px;display:flex;align-items:center;gap:5px;z-index:2}
+.bar{width:5px;border-radius:9px;background:linear-gradient(#fff,#b86cff,#5de1ff);animation:beat .8s ease-in-out infinite alternate}
+@keyframes beat{from{height:18px;opacity:.45}to{height:var(--h);opacity:1}}
+@keyframes pulse{50%{transform:scale(1.13);opacity:.35}}
+section{padding:80px 0}
+.kicker{color:#bdbdc9;font-size:12px;text-transform:uppercase;letter-spacing:3px}
+h2{font-size:42px;margin:10px 0 35px;letter-spacing:-1.5px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));border-radius:22px;padding:20px;min-height:250px}
+.card h3{margin:18px 0 8px}.card p{color:var(--muted);line-height:1.6}
+.preview{height:135px;border-radius:15px;background:#07070a;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.mini-bars{display:flex;align-items:center;gap:3px;height:85px}.mini-bars i{display:block;width:4px;background:linear-gradient(#fff,#b86cff,#5de1ff);border-radius:5px;animation:beat .65s infinite alternate}
+.mini-bars i:nth-child(2n){animation-delay:.15s}.mini-bars i:nth-child(3n){animation-delay:.3s}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.panel{border:1px solid var(--line);border-radius:24px;padding:30px;background:rgba(255,255,255,.025)}
+.panel p{color:var(--muted);line-height:1.8}
+.yt{display:flex;justify-content:space-between;align-items:center;gap:20px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:#777;font-size:13px}
+@media(max-width:800px){
+ .hero{grid-template-columns:1fr;padding-top:65px}.visualizer{height:320px}
+ .grid,.about{grid-template-columns:1fr}.links{display:none}h1{letter-spacing:-3px}
+}
+</style>
+</head>
+<body>
+<nav><div class="container navin">
+  <a class="brand" href="#"><span class="logo">BB</span><span>BADDYBEATS</span></a>
+  <div class="links"><a href="#visuals">Visuals</a><a href="#about">About</a><a href="#youtube">YouTube</a></div>
+</div></nav>
+
+<main>
+<section class="hero container">
+  <div>
+    <span class="badge">AVEE PLAYER • EDITS • VISUALS</span>
+    <h1>MAKE IT<br><span class="gradient">HIT.</span></h1>
+    <p>BADDYBEATS creates high-energy Avee Player visualizers, music edits and cinematic intros built for short-form video.</p>
+    <div class="buttons">
+      <a class="btn primary" href="https://youtube.com/@baddybeat" target="_blank">Watch on YouTube ↗</a>
+      <a class="btn secondary" href="#visuals">Explore Visuals</a>
+    </div>
+  </div>
+  <div class="visualizer" aria-label="Animated audio visualizer">
+    <span class="ring"></span><span class="ring r2"></span><span class="ring r3"></span>
+    <div class="bars">
+      <i class="bar" style="--h:45px"></i><i class="bar" style="--h:80px"></i><i class="bar" style="--h:115px"></i><i class="bar" style="--h:65px"></i><i class="bar" style="--h:145px"></i><i class="bar" style="--h:95px"></i><i class="bar" style="--h:125px"></i><i class="bar" style="--h:72px"></i><i class="bar" style="--h:140px"></i><i class="bar" style="--h:92px"></i><i class="bar" style="--h:55px"></i>
+    </div>
+  </div>
+</section>
+
+<section id="visuals"><div class="container">
+  <span class="kicker">Selected style</span><h2>Visuals that move.</h2>
+  <div class="grid">
+    <article class="card"><div class="preview"><div class="mini-bars"><i style="height:28px"></i><i style="height:55px"></i><i style="height:75px"></i><i style="height:40px"></i><i style="height:90px"></i><i style="height:62px"></i><i style="height:80px"></i><i style="height:45px"></i><i style="height:70px"></i><i style="height:35px"></i><i style="height:60px"></i><i style="height:48px"></i><i style="height:88px"></i><i style="height:52px"></i><i style="height:30px"></i></div></div><h3>Pulse Spectrum</h3><p>Clean spectrum-driven motion for phonk, funk and high-energy tracks.</p></article>
+    <article class="card"><div class="preview"><div class="ring r2"></div><div class="ring r3"></div></div><h3>Neon Orbit</h3><p>Minimal circular motion with a futuristic, cinematic feel.</p></article>
+    <article class="card"><div class="preview"><div class="mini-bars"><i style="height:50px"></i><i style="height:32px"></i><i style="height:75px"></i><i style="height:92px"></i><i style="height:40px"></i><i style="height:68px"></i><i style="height:95px"></i><i style="height:55px"></i><i style="height:82px"></i><i style="height:44px"></i><i style="height:70px"></i><i style="height:100px"></i><i style="height:45px"></i><i style="height:76px"></i><i style="height:35px"></i></div></div><h3>Darkwave Bars</h3><p>Sharp animated bars designed to look strong in vertical Shorts.</p></article>
+  </div>
+</div></section>
+
+<section id="about"><div class="container">
+  <span class="kicker">The creator</span><h2>About BADDYBEATS</h2>
+  <div class="about">
+    <div class="panel"><h3>What I create</h3><p>Avee Player visualizers, short-form music edits, creative intros and motion-based designs. The focus is simple: strong movement, clean composition and an instantly recognizable visual identity.</p></div>
+    <div class="panel"><h3>Built for Shorts</h3><p>Fast hooks, vertical-first compositions and audio-reactive motion made for short-form platforms and music-focused edits.</p></div>
+  </div>
+</div></section>
+
+<section id="youtube"><div class="container">
+  <div class="panel yt"><div><span class="kicker">Official channel</span><h2 style="margin-bottom:8px">@baddybeat</h2><p>See the latest BADDYBEATS visualizers, edits and intros on YouTube.</p></div>
+  <a class="btn primary" href="https://youtube.com/@baddybeat" target="_blank">Open Channel ↗</a></div>
+</div></section>
+</main>
+
+<footer><div class="container">© 2026 BADDYBEATS. Built for visuals, edits & motion.</div></footer>
+</body>
+</html>
